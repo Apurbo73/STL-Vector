@@ -2,37 +2,35 @@
 
 using namespace std;
 
-int main() {
+int main()
+{
 
     int n;
     cin >> n;
-    while (n--) {
-        vector < int > v;
+    while (n--)
+    {
+        vector<int> v;
         int b;
         cin >> b;
-        for (int i = 1; i <= b; i++) {
+        for (int i = 0; i < b; i++)
+        {
             int c;
             cin >> c;
-            v.push_back(i);
+            v.push_back(c);
         }
 
-        if (v.size() % 2 != 0 && v.size() % 3 == 0) {
-            cout << v[b / 2 + 1] << endl;
-
-
+        if (v.size() % 2 != 0 && v.size() % 3 == 0)
+        {
+            cout << v[b / 2] << endl;
         }
         else if (v.size() % 2 == 0 && v.size() % 3 == 0)
         {
-            int f = v.size();
-            cout << v[0] << " " << v[f - 1] << endl;
+            cout << v.front() << " " << v.back() << endl;
         }
         else
         {
-            int f = v.size();
 
-            cout << v[0] + v[f - 1] << endl;
+            cout << v.front() + v.back() << endl;
         }
-
     }
-
 }
